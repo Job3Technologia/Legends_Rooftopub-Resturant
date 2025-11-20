@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Legends Rooftop Pub & Restaurant | Authentic Kasi Cuisine</title>
+    <meta name="description" content="Explore our authentic Kasi menu featuring braai specials, kota sandwiches, traditional dishes, and premium drinks at Legends Rooftop in Umlazi, Durban.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Legends Rooftop menu, Kasi food Durban, Umlazi restaurant menu, braai specials, kota sandwiches, traditional South African food">
+    <meta name="author" content="Legends Rooftop Pub & Restaurant">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Menu - Legends Rooftop Pub & Restaurant | Authentic Kasi Cuisine">
+    <meta property="og:description" content="Explore our authentic Kasi menu featuring braai specials, kota sandwiches, traditional dishes, and premium drinks.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://legendsrooftop.co.za/menu.html">
+    <meta property="og:image" content="https://i.ibb.co/MxzMfsJw/IMG-20251110-WA0055.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://legendsrooftop.co.za/menu.html">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --primary-dark: #E55A2B;
+            --secondary: #1A1A1A;
+            --accent: #FFD166;
+            --gold: #D4AF37;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --background: #FFFFFF;
+            --background-alt: #F8F9FA;
+            --success: #28A745;
+            --warning: #FFC107;
+            --error: #DC3545;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #FF6B35 0%, #E55A2B 100%);
+            --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #F4D03F 100%);
+            --gradient-dark: linear-gradient(135deg, #1A1A1A 0%, #333333 100%);
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 8px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 16px rgba(0,0,0,0.15);
+            --shadow-xl: 0 12px 24px rgba(0,0,0,0.18);
+            --shadow-glow: 0 0 20px rgba(255, 107, 53, 0.4);
+            
+            /* Border Radius */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 50%;
+            
+            /* Spacing */
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-xxl: 48px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--background);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        /* Enhanced Navigation */
+        .enhanced-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .enhanced-nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-sm) var(--space-md);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .logo-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-wrapper img {
+            height: 50px;
+            width: auto;
+            border-radius: var(--radius-md);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-md);
+            opacity: 0;
+            filter: blur(10px);
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .logo-wrapper:hover .logo-glow {
+            opacity: 0.6;
+        }
+
+        .logo-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .nav-logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin: 0;
+        }
+
+        .nav-logo-text span {
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-md);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .nav-link::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: var(--radius-md);
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover::before {
+            transform: translateY(0);
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .order-btn {
+            background: var(--gradient-primary);
+            color: white !important;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .order-btn::before {
+            display: none;
+        }
+
+        .btn-glow {
+            box-shadow: var(--shadow-glow);
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 107, 53, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0); }
+        }
+
+        .cart-btn {
+            position: relative;
+            padding: var(--space-sm);
+        }
+
+        .cart-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--background-alt);
+            border-radius: var(--radius-full);
+            transition: all 0.3s ease;
+        }
+
+        .cart-icon i {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--primary);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 600;
+            width: 18px;
+            height: 18px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-pulse {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px;
+            height: 44px;
+            background: var(--primary);
+            border-radius: var(--radius-full);
+            opacity: 0;
+            animation: cartPulse 2s infinite;
+        }
+
+        @keyframes cartPulse {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+            100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+        }
+
+        .enhanced-hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .enhanced-hamburger .bar {
+            width: 25px;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* Menu Hero Section */
+        .menu-hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(26, 26, 26, 0.7) 100%), url('https://i.ibb.co/MxzMfsJw/IMG-20251110-WA0055.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+
+        .menu-hero-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: var(--space-md);
+        }
+
+        .menu-hero-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto var(--space-xl);
+        }
+
+        .menu-search {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .menu-search input {
+            width: 100%;
+            padding: var(--space-md) var(--space-lg);
+            border-radius: var(--radius-full);
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .menu-search input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .menu-search i {
+            position: absolute;
+            right: var(--space-lg);
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Category Navigation */
+        .category-nav {
+            background: var(--background);
+            padding: var(--space-md) 0;
+            position: sticky;
+            top: 80px;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .category-container {
+            display: flex;
+            overflow-x: auto;
+            gap: var(--space-sm);
+            padding: var(--space-sm) 0;
+        }
+
+        .category-btn {
+            padding: var(--space-sm) var(--space-lg);
+            background: var(--background-alt);
+            border: none;
+            border-radius: var(--radius-full);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .category-btn.active {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .category-btn:hover:not(.active) {
+            background: rgba(255, 107, 53, 0.1);
+        }
+
+        /* Menu Sections */
+        .menu-section {
+            padding: var(--space-xxl) 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-xxl);
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: var(--space-md);
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .menu-item-image {
+            height: 200px;
+            background: var(--background-alt);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+        }
+
+        .menu-item-image i {
+            font-size: 3rem;
+            opacity: 0.5;
+        }
+
+        .menu-item-content {
+            padding: var(--space-lg);
+        }
+
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+        }
+
+        .menu-item-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .menu-item-price {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .menu-item-description {
+            color: var(--text-light);
+            margin-bottom: var(--space-md);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .menu-item-tags {
+            display: flex;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+
+        .tag {
+            padding: 4px 8px;
+            background: var(--background-alt);
+            border-radius: var(--radius-sm);
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .tag.spicy {
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--primary);
+        }
+
+        .tag.popular {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+        }
+
+        .tag.vegetarian {
+            background: rgba(40, 167, 69, 0.1);
+            color: var(--success);
+        }
+
+        .add-to-cart-btn {
+            width: 100%;
+            padding: var(--space-md);
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+        }
+
+        .add-to-cart-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .add-to-cart-btn.added {
+            background: var(--success);
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-sm);
+        }
+
+        .quantity-btn {
+            width: 32px;
+            height: 32px;
+            background: var(--background-alt);
+            border: none;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .quantity-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .quantity-display {
+            font-weight: 700;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        /* Sticky Cart Bar */
+        .sticky-cart-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+            padding: var(--space-md);
+            z-index: 1000;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .sticky-cart-bar.visible {
+            transform: translateY(0);
+        }
+
+        .cart-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cart-summary {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+        }
+
+        .cart-items-count {
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .cart-total {
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .cart-actions {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Enhanced Footer */
+        .enhanced-footer {
+            background: var(--secondary);
+            color: white;
+            position: relative;
+            padding-top: var(--space-xxl);
+        }
+
+        .footer-wave {
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="%231a1a1a"></path></svg>');
+            background-size: cover;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xxl);
+        }
+
+        .footer-section h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            color: white;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-logo-text h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            margin: 0;
+        }
+
+        .footer-logo-text span {
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: var(--space-lg);
+            line-height: 1.6;
+        }
+
+        .enhanced-social {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .social-link {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-full);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .social-link:hover .social-glow {
+            opacity: 1;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--space-sm);
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .contact-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-icon i {
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--space-xl) 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+
+        .footer-cta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+        }
+
+        .footer-cta h4 {
+            color: white;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .btn-small {
+            padding: var(--space-sm) var(--space-lg);
+            font-size: 0.9rem;
+        }
+
+        .footer-copyright {
+            text-align: right;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-copyright p {
+            margin-bottom: var(--space-xs);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: var(--space-lg);
+                box-shadow: var(--shadow-lg);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .enhanced-hamburger {
+                display: flex;
+            }
+            
+            .menu-hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cart-bar-content {
+                flex-direction: column;
+                gap: var(--space-md);
+            }
+            
+            .cart-summary {
+                flex-direction: column;
+                gap: var(--space-sm);
+                text-align: center;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-cta {
+                flex-direction: column;
+                gap: var(--space-md);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <!-- Enhanced Navigation -->
+    <nav class="navbar enhanced-nav" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-wrapper">
+                    <img src="https://i.ibb.co/JLfy4Jm/Lengends-Container-Sign.jpg" alt="Legends Rooftop Logo">
+                    <div class="logo-glow"></div>
+                </div>
+                <div class="nav-logo-text">
+                    <h1>LEGENDS</h1>
+                    <span>Rooftop Pub & Restaurant</span>
+                </div>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-text="Home">Home</a>
+                <a href="about.html" class="nav-link" data-text="About">About</a>
+                <a href="menu.html" class="nav-link active" data-text="Menu">Menu</a>
+                <a href="gallery.html" class="nav-link" data-text="Gallery">Gallery</a>
+                <a href="booking.html" class="nav-link" data-text="Bookings">Bookings</a>
+                <a href="order.html" class="nav-link order-btn pulse" data-text="Order Now">
+                    <span>Order Now</span>
+                    <div class="btn-glow"></div>
+                </a>
+                <!-- Cart and non-existent pages removed for a clean, marketing-only experience -->
+            </div>
+            <div class="hamburger enhanced-hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Hero Section -->
+    <section class="menu-hero">
+        <div class="container">
+            <div class="menu-hero-content">
+                <h1>Our Menu</h1>
+                <p>Experience authentic Kasi flavors with a modern twist. From traditional braai to creative kota sandwiches.</p>
+                <div class="menu-search">
+                    <input type="text" placeholder="Search for your favorite dish...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Navigation -->
+    <section class="category-nav">
+        <div class="container">
+            <div class="category-container">
+                <button class="category-btn active" data-category="braai">Braai Specials</button>
+                <button class="category-btn" data-category="kota">Bunny Chow Corner</button>
+                <button class="category-btn" data-category="breakfast">Breakfast</button>
+                <button class="category-btn" data-category="lunch">Lunch</button>
+                <button class="category-btn" data-category="dinner">Dinner</button>
+                <button class="category-btn" data-category="platters">Platters</button>
+                <button class="category-btn" data-category="starters">Starters</button>
+                <button class="category-btn" data-category="drinks">Drinks</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Sections -->
+    <main class="menu-container">
+        <!-- Braai Specials -->
+        <section class="menu-section" id="braai">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Braai Specials</h2>
+                    <p>Perfectly grilled meats with traditional Kasi marinades and spices</p>
+                </div>
+                <div class="menu-grid">
+                    <!-- Braai items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Bunny Chow Corner -->
+        <section class="menu-section" id="kota">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Bunny Chow Corner</h2>
+                    <p>Authentic township-style sandwiches with generous, hearty fillings</p>
+                </div>
+                <div class="menu-grid">
+                    <!-- Kota items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Breakfast -->
+        <section class="menu-section" id="breakfast">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Breakfast</h2>
+                    <p>Start your day with traditional South African breakfast favorites</p>
+                </div>
+                <div class="menu-grid">
+                    <!-- Breakfast items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Lunch -->
+        <section class="menu-section" id="lunch">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Lunch</h2>
+                    <p>Hearty midday meals to power you through the day</p>
+                </div>
+                <div class="menu-grid">
+                    <!-- Lunch items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Dinner -->
+        <section class="menu-section" id="dinner">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Dinner</h2>
+                    <p>Evening delights to end your day on a delicious note</p>
+                </div>
+                <div class="menu-grid">
+                    <!-- Dinner items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Platters -->
+        <section class="menu-section" id="platters">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Platters</h2>
+                    <p>Perfect for sharing with friends and family</p>
+                </div>
+                <div class="menu-grid">
+                    <!-- Platter items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Starters -->
+        <section class="menu-section" id="starters">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Starters</h2>
+                    <p>Small bites to kick off your meal</p>
+                </div>
+                <div class="menu-grid">
+                    <!-- Starter items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Drinks -->
+        <section class="menu-section" id="drinks">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Drinks</h2>
+                    <p>Refreshments to complement your meal</p>
+                </div>
+                <div class="menu-grid">
+                    <!-- Drink items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sticky Cart Bar removed: checkout disabled; use Order page instead -->
+
+    <!-- Enhanced Footer -->
+    <footer class="footer enhanced-footer">
+        <div class="footer-wave"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-wrapper">
+                            <img src="https://i.ibb.co/JLfy4Jm/Lengends-Container-Sign.jpg" alt="Legends Rooftop Logo">
+                        </div>
+                        <div class="footer-logo-text">
+                            <h3>LEGENDS</h3>
+                            <span>Rooftop Pub & Restaurant</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">Bringing authentic Kasi flavors to your doorstep with modern convenience and traditional taste.</p>
+                    <div class="social-links enhanced-social">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                            <div class="social-glow"></div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="booking.html">Book Table</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#braai">Braai Specials</a></li>
+                        <li><a href="#kota">Kota Corner</a></li>
+                        <li><a href="#traditional">Traditional Dishes</a></li>
+                        <li><a href="#drinks">Drinks & Beverages</a></li>
+                        <li><a href="#desserts">Desserts</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span> 296 Dingani Rd, Umlazi J, Umlazi, 4066 </span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <span>078 734 8487</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span>info@legendsrooftop.co.za</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <span>Monday - Sunday = 12:00pm till Late</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-cta">
+                    <h4>Ready to experience Legends?</h4>
+                    <a href="order.html" class="btn btn-primary btn-small">
+                        <span>Order Now</span>
+                        <i class="fas fa-bolt"></i>
+                    </a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Legends Rooftop Pub & Restaurant. All rights reserved.</p>
+                    <p>Established 2018 • Made with ❤️ for the Kasi community</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Data
+        const menuData = {
+            braai: [
+                { id: 1, name: "Mixed Braai Platter", description: "A generous selection of boerewors, lamb chops, chicken wings, and beef steak, served with pap and chakalaka", price: 180, tags: ["Serves 2-3", "spicy"], popular: true },
+                { id: 2, name: "Grilled Lamb Chops", description: "Tender lamb chops marinated in our secret Kasi spice blend, grilled to perfection", price: 120, tags: ["4 Pieces", "signature"] },
+                { id: 3, name: "Traditional Boerewors", description: "Authentic South African farmer's sausage, served with pap and tomato relish", price: 80, tags: ["300g", "traditional"] },
+                { id: 4, name: "Peri-Peri Chicken Wings", description: "Crispy chicken wings tossed in our homemade peri-peri sauce, served with blue cheese dip", price: 70, tags: ["8 Wings", "spicy"] },
+                { id: 5, name: "Rump Steak", description: "300g prime rump steak, grilled to your preference, served with chips and vegetables", price: 140, tags: ["300g", "premium"] },
+                { id: 6, name: "Lamb Sosaties", description: "Traditional Cape Malay lamb skewers with apricots and curry marinade", price: 90, tags: ["3 Skewers", "Cape Malay"] },
+                { id: 7, name: "Chicken Livers", description: "Spicy chicken livers with onions and peppers, served with fresh bread", price: 65, tags: ["Traditional", "spicy"] }
+            ],
+            Bunny Chow : [
+                { id: 8, name: "Full Kota", description: "Quarter loaf filled with Russian sausage, chips, cheese, egg, and salad", price: 45, tags: ["Classic", "Large"], popular: true },
+                { id: 9, name: "Polony Kota", description: "Quarter loaf with polony, chips, atchar, and special sauce", price: 35, tags: ["Budget", "Popular"] },
+                { id: 10, name: "Chicken Kota", description: "Quarter loaf filled with crispy chicken strips, chips, cheese, and mayo", price: 50, tags: ["Premium", "Crispy"] },
+                { id: 11, name: "Burger Kota", description: "Quarter loaf with beef patty, chips, cheese, egg, and burger sauce", price: 55, tags: ["Hearty", "Special"] },
+                { id: 12, name: "Veggie Kota", description: "Quarter loaf with veggie patty, chips, cheese, and fresh salad", price: 40, tags: ["Vegetarian", "Healthy"] },
+                { id: 13, name: "Spicy Kota", description: "Quarter loaf with spicy Russian, chips, cheese, and hot sauce", price: 48, tags: ["Hot", "Spicy"] },
+                { id: 14, name: "Fish Kota", description: "Quarter loaf with fried fish, chips, tartar sauce, and salad", price: 52, tags: ["Seafood", "Fresh"] }
+            ],
+            breakfast: [
+                { id: 15, name: "Full English Breakfast", description: "Eggs, bacon, sausage, baked beans, toast, and grilled tomato", price: 75, tags: ["Hearty", "Classic"] },
+                { id: 16, name: "Kasi Breakfast", description: "Pap, wors, fried eggs, and tomato relish", price: 60, tags: ["Traditional", "Filling"] },
+                { id: 17, name: "Avo Toast", description: "Sourdough toast with mashed avocado, cherry tomatoes, and poached egg", price: 55, tags: ["Vegetarian", "Healthy"] },
+                { id: 18, name: "French Toast", description: "Thick bread slices dipped in egg batter, served with maple syrup", price: 45, tags: ["Sweet", "Comfort"] },
+                { id: 19, name: "Breakfast Wrap", description: "Scrambled eggs, cheese, and your choice of bacon or sausage in a wrap", price: 50, tags: ["Portable", "Quick"] },
+                { id: 20, name: "Yoghurt & Granola", description: "Greek yoghurt with homemade granola and fresh berries", price: 40, tags: ["Healthy", "Light"] }
+            ],
+            lunch: [
+                { id: 21, name: "Pap en Vleis", description: "Creamy pap served with your choice of beef, chicken, or lamb stew", price: 95, tags: ["Traditional", "Hearty"] },
+                { id: 22, name: "Mogodu", description: "Traditional tripe stew slow-cooked with onions, tomatoes, and spices", price: 85, tags: ["Traditional", "Slow-cooked"] },
+                { id: 23, name: "Umngqusho", description: "Traditional samp and beans cooked with butter and spices", price: 75, tags: ["Vegetarian", "Comfort Food"] },
+                { id: 24, name: "Kasi Chicken Curry", description: "Authentic Durban-style chicken curry with potatoes and roti", price: 88, tags: ["Durban Style", "Medium Hot"] },
+                { id: 25, name: "Bunny Chow", description: "Quarter loaf filled with your choice of curry (chicken, beef, or beans)", price: 65, tags: ["Durban Icon", "Street Food"] },
+                { id: 26, name: "Oxtail Stew", description: "Rich and hearty oxtail stew slow-cooked until tender, served with pap", price: 150, tags: ["Premium", "Slow-cooked"] }
+            ],
+            dinner: [
+                { id: 27, name: "Grilled Kingklip", description: "Fresh kingklip fillet grilled with lemon butter sauce, served with vegetables", price: 160, tags: ["Seafood", "Premium"] },
+                { id: 28, name: "Lamb Shank", description: "Slow-braised lamb shank in red wine sauce, served with mashed potato", price: 180, tags: ["Premium", "Slow-cooked"] },
+                { id: 29, name: "Chicken Parmesan", description: "Breaded chicken breast with tomato sauce and melted cheese", price: 120, tags: ["Italian", "Comfort"] },
+                { id: 30, name: "Beef Stroganoff", description: "Tender beef strips in creamy mushroom sauce, served with rice", price: 130, tags: ["Creamy", "Comfort"] },
+                { id: 31, name: "Vegetable Lasagna", description: "Layers of pasta, vegetables, and cheese in tomato sauce", price: 95, tags: ["Vegetarian", "Hearty"] },
+                { id: 32, name: "Pork Ribs", description: "Fall-off-the-bone pork ribs with BBQ sauce, served with chips", price: 140, tags: ["BBQ", "Finger Food"] }
+            ],
+            platters: [
+                { id: 33, name: "Legends Ultimate Platter", description: "A feast for 4-6 people with mixed meats, sides, and sauces", price: 450, tags: ["Serves 4-6", "Share"], popular: true },
+                { id: 34, name: "Seafood Platter", description: "Grilled prawns, calamari, fish, and mussels with lemon butter sauce", price: 380, tags: ["Seafood", "Premium"] },
+                { id: 35, name: "Vegetarian Platter", description: "Assorted vegetable dishes, salads, and dips for sharing", price: 220, tags: ["Vegetarian", "Share"] },
+                { id: 36, name: "Meat Lovers Platter", description: "All our best meats including steak, ribs, wings, and boerewors", price: 420, tags: ["Meat", "Share"] },
+                { id: 37, name: "Kota Platter", description: "Assortment of 4 different kota halves for sharing", price: 180, tags: ["Share", "Variety"] }
+            ],
+            starters: [
+                { id: 38, name: "Slap Chips", description: "Traditional South African soft chips with vinegar and salt", price: 35, tags: ["Classic", "Vegan"] },
+                { id: 39, name: "Chakalaka", description: "Spicy vegetable relish with beans, carrots, and peppers", price: 25, tags: ["Spicy", "Vegan"] },
+                { id: 40, name: "Garlic Bread", description: "Fresh bread with garlic butter and herbs", price: 30, tags: ["Classic", "Garlic"] },
+                { id: 41, name: "Chicken Livers Peri-Peri", description: "Spicy chicken livers served with fresh bread", price: 55, tags: ["Spicy", "Traditional"] },
+                { id: 42, name: "Spring Rolls", description: "Crispy vegetable spring rolls with sweet chili sauce", price: 45, tags: ["Vegetarian", "Crispy"] },
+                { id: 43, name: "Buffalo Wings", description: "Crispy chicken wings in buffalo sauce with blue cheese dip", price: 65, tags: ["Spicy", "Share"] }
+            ],
+            drinks: [
+                { id: 44, name: "Castle Lite", description: "Ice-cold Castle Lite draught", price: 25, tags: ["Draught", "Cold"], alcoholic: true },
+                { id: 45, name: "Local Craft Beer", description: "Selection of local craft beers - ask your server for today's options", price: 35, tags: ["Craft", "Local"], alcoholic: true },
+                { id: 46, name: "Savanna Cider", description: "Crisp and refreshing Savanna Dry or Savanna Light", price: 28, tags: ["Cider", "Refreshing"], alcoholic: true },
+                { id: 47, name: "Amarula Cream", description: "South Africa's famous cream liqueur, served on the rocks", price: 45, tags: ["Cream Liqueur", "South African"], alcoholic: true },
+                { id: 48, name: "House Wine", description: "Glass of our selected house red or white wine", price: 40, tags: ["Wine", "House"], alcoholic: true },
+                { id: 49, name: "Soft Drinks", description: "Coca-Cola, Sprite, Fanta, Stoney, and Sparletta varieties", price: 18, tags: ["Cold", "Refreshing"], alcoholic: false },
+                { id: 50, name: "Fresh Juice", description: "Orange, apple, or tropical fruit juice", price: 22, tags: ["Fresh", "Healthy"], alcoholic: false },
+                { id: 51, name: "Bottled Water", description: "Still or sparkling bottled water", price: 15, tags: ["Hydration", "Essential"], alcoholic: false },
+                { id: 52, name: "Iced Tea", description: "Freshly brewed iced tea with lemon", price: 20, tags: ["Refreshing", "Cold"], alcoholic: false },
+                { id: 53, name: "Coffee", description: "Espresso, cappuccino, or filter coffee", price: 18, tags: ["Hot", "Energizing"], alcoholic: false },
+                { id: 54, name: "Milkshake", description: "Vanilla, chocolate, or strawberry milkshake", price: 28, tags: ["Creamy", "Sweet"], alcoholic: false }
+            ]
+        };
+
+        // Cart functionality removed: marketing-only site
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Populate menu sections
+            populateMenuSections();
+            
+            // Setup event listeners
+            setupEventListeners();
+            
+            // Cart display removed
+            
+            // Setup category navigation
+            setupCategoryNavigation();
+            
+            // Setup search functionality
+            setupSearch();
+        });
+
+        function populateMenuSections() {
+            for (const category in menuData) {
+                const section = document.getElementById(category);
+                if (section) {
+                    const menuGrid = section.querySelector('.menu-grid');
+                    menuGrid.innerHTML = '';
+                    
+                    menuData[category].forEach(item => {
+                        const menuItem = createMenuItem(item);
+                        menuGrid.appendChild(menuItem);
+                    });
+                }
+            }
+        }
+
+        function createMenuItem(item) {
+            const menuItem = document.createElement('div');
+            menuItem.className = 'menu-item';
+            menuItem.dataset.id = item.id;
+            
+            // Determine icon based on category
+            let icon = 'fa-utensils';
+            if (item.tags && item.tags.some(tag => tag.toLowerCase().includes('vegetarian'))) {
+                icon = 'fa-leaf';
+            } else if (item.tags && item.tags.some(tag => tag.toLowerCase().includes('spicy'))) {
+                icon = 'fa-pepper-hot';
+            } else if (item.tags && item.tags.some(tag => tag.toLowerCase().includes('seafood'))) {
+                icon = 'fa-fish';
+            }
+            
+            menuItem.innerHTML = `
+                <div class="menu-item-image">
+                    <i class="fas ${icon}"></i>
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <div class="menu-item-title">${item.name}</div>
+                        <div class="menu-item-price">R${item.price}</div>
+                    </div>
+                    <p class="menu-item-description">${item.description}</p>
+                    <div class="menu-item-tags">
+                        ${item.tags ? item.tags.map(tag => 
+                            `<span class="tag ${tag.toLowerCase().includes('spicy') ? 'spicy' : ''} 
+                            ${tag.toLowerCase().includes('popular') ? 'popular' : ''}
+                            ${tag.toLowerCase().includes('vegetarian') ? 'vegetarian' : ''}">${tag}</span>`
+                        ).join('') : ''}
+                        ${item.popular ? '<span class="tag popular">Popular</span>' : ''}
+                        ${item.alcoholic ? '<span class="tag">Alcoholic</span>' : ''}
+                    </div>
+                    <div class="menu-actions">
+                        <a href="order.html" class="btn btn-primary"><i class="fas fa-clipboard-list"></i> Request Order</a>
+                    </div>
+                </div>
+            `;
+            
+            return menuItem;
+        }
+        // Removed addToCart and cart display functions
+
+        function setupEventListeners() {
+            // Navigation hamburger
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            // Nav scroll effect
+            window.addEventListener('scroll', () => {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // Clear cart button
+            const clearCartBtn = document.getElementById('clearCartBtn');
+            if (clearCartBtn) {
+                clearCartBtn.addEventListener('click', () => {
+                    cart = [];
+                    localStorage.setItem('legendsCart', JSON.stringify(cart));
+                    updateCartDisplay();
+                });
+            }
+            
+            const cartBtn = document.getElementById('cart-button');
+            if (cartBtn) {
+                cartBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.location.href = 'order.html';
+                });
+            }
+
+            window.addEventListener('storage', (e) => {
+                if (e.key === 'legendsCart') {
+                    try {
+                        cart = JSON.parse(localStorage.getItem('legendsCart') || '[]');
+                    } catch (_) {
+                        cart = [];
+                    }
+                    updateCartDisplay();
+                }
+            });
+
+            // Close mobile menu on link click
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (hamburger && navMenu) {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            });
+        }
+
+        function setupCategoryNavigation() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const menuSections = document.querySelectorAll('.menu-section');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Scroll to section
+                    const category = this.dataset.category;
+                    const section = document.getElementById(category);
+                    if (section) {
+                        window.scrollTo({
+                            top: section.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Highlight active category based on scroll position
+            window.addEventListener('scroll', function() {
+                let current = '';
+                menuSections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                categoryBtns.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.dataset.category === current) {
+                        btn.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        function setupSearch() {
+            const searchInput = document.querySelector('.menu-search input');
+            if (!searchInput) return;
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                // Search through all menu items
+                for (const category in menuData) {
+                    const section = document.getElementById(category);
+                    if (section) {
+                        const menuGrid = section.querySelector('.menu-grid');
+                        menuGrid.innerHTML = '';
+                        
+                        const filteredItems = menuData[category].filter(item => 
+                            item.name.toLowerCase().includes(searchTerm) || 
+                            item.description.toLowerCase().includes(searchTerm) ||
+                            (item.tags && item.tags.some(tag => tag.toLowerCase().includes(searchTerm)))
+                        );
+                        
+                        if (filteredItems.length > 0) {
+                            filteredItems.forEach(item => {
+                                const menuItem = createMenuItem(item);
+                                menuGrid.appendChild(menuItem);
+                            });
+                        } else {
+                            menuGrid.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-light);">No items found matching "${searchTerm}"</p>`;
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-spinner">
+                    <img src="https://i.ibb.co/JLfy4Jm/Lengends-Container-Sign.jpg" alt="Legends Logo">
+                </div>
+            </div>
+            <div class="loading-text">
+                <h3>Legends Rooftop</h3>
+                <p>Loading Kasi flavors...</p>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const ls = document.getElementById('loadingScreen');
+        if (ls) {
+            setTimeout(function() { ls.classList.add('hidden'); }, 1200);
+        }
+    });
+    </script>
+</body>
+</html>
